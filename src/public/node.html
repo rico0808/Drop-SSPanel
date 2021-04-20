@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/tailwind.min.css" />
+    <title>DROP</title>
+  </head>
+  <body>
+    <div
+      id="loading"
+      class="w-screen h-screen absolute z-10 bg-white flex justify-center items-center"
+    >
+      <span class="animate-bounce">Loading...</span>
+    </div>
+    <div class="h-screen p-4 pt-0">
+      <div class="flex font-bold text-white">
+        <div
+          class="bg-black w-1/2 h-24 mr-1 rounded px-4 flex flex-col justify-center"
+        >
+          <span class="">剩余流量</span>
+          <div>
+            <span id="limit" class="text-1/5xl">9999</span>
+            <span>/GB</span>
+          </div>
+        </div>
+        <div
+          class="bg-black w-1/2 h-24 ml-1 rounded px-4 flex flex-col justify-center"
+        >
+          <span class="">到期时间</span>
+          <div>
+            <span id="exptime" class="text-1/5xl">2099-01-01</span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modesele p-2 bg-blue-600 rounded mt-2 p-2 font-bold text-white text-center flex"
+      >
+        <div
+          id="global"
+          class="mode flex-1 mr-1 py-2 rounded cursor-pointer hover:bg-blue-900 transition-all"
+        >
+          Global
+        </div>
+        <div
+          id="rule"
+          class="mode flex-1 mx-1 py-2 rounded cursor-pointer hover:bg-blue-900 transition-all"
+        >
+          Rule
+        </div>
+        <div
+          id="direct"
+          class="mode flex-1 ml-1 py-2 rounded cursor-pointer hover:bg-blue-900 transition-all"
+        >
+          Direct
+        </div>
+      </div>
+      <div id="nodelist" class="mt-2 node-list rounded"></div>
+    </div>
+
+    <script src="./assets/js/node.js"></script>
+  </body>
+</html>

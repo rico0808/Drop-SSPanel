@@ -1,0 +1,38 @@
+{
+  "name": "drop",
+  "version": "1.0.0",
+  "main": "./main.js",
+  "license": "MIT",
+  "description": "easy and fast",
+  "author": "drop",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "electron": "^12.0.4",
+    "electron-builder": "^22.10.5",
+    "electron-reload": "^1.5.0",
+    "prettier": "^2.2.1"
+  },
+  "build": {
+    "directories": {
+      "output": "release",
+      "app": "./"
+    },
+    "extraResources": {
+      "from": "./src/ext",
+      "to": "./"
+    },
+    "win": {
+      "icon": "drop.ico",
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  }
+}
